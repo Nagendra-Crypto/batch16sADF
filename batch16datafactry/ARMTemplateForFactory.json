@@ -24,12 +24,20 @@
 						"dependsOn": [],
 						"userProperties": [],
 						"typeProperties": {
-							"waitTimeInSeconds": 1
+							"waitTimeInSeconds": {
+								"value": "@pipeline().parameters.wait",
+								"type": "Expression"
+							}
 						}
 					}
 				],
 				"policy": {
 					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"wait": {
+						"type": "int"
+					}
 				},
 				"annotations": []
 			},
